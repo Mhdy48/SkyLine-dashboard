@@ -419,6 +419,137 @@
               </div>
             </div>
           </div>
+          <!-- ================= ANALYTICS SECTION ================= -->
+          <!-- Revenue Overview + Recent Bookings -->
+          <div class="mt-7 grid grid-cols-8 gap-6 max-[1300px]:pb-[1.8rem]">
+            <!-- ================= REVENUE OVERVIEW ================= -->
+            <div
+              class="col-span-3 rounded-2xl bg-surface p-6 shadow-card duration-500 max-[1150px]:col-span-4 max-[1050px]:col-span-8 dark:bg-surface-dark"
+            >
+              <!-- Revenue Header -->
+              <div class="flex items-center justify-between">
+                <h2
+                  class="text-lg font-semibold text-content-primary duration-500 dark:text-white"
+                >
+                  Revenue Overview
+                </h2>
+                <button
+                  type="button"
+                  class="cursor-pointer rounded-xl border border-border px-4 py-2 text-sm text-content-secondary transition-all duration-500 hover:bg-surface-soft max-[400px]:px-2 dark:border-border-dark dark:bg-surface-dark dark:text-white dark:hover:bg-surface-raised-dark"
+                >
+                  This Month
+                  <i class="fa-solid fa-chevron-down ml-2 text-xs"></i>
+                </button>
+              </div>
+              <!-- Chart Area -->
+              <div
+                class="mt-5 h-60 bg-surface p-2.5 duration-500 dark:bg-surface-dark"
+              >
+                <canvas id="revenueChart"></canvas>
+              </div>
+            </div>
+            <!-- ================= RECENT BOOKINGS TABLE ================= -->
+            <div
+              class="col-span-5 rounded-2xl bg-surface p-6 shadow-card duration-500 max-[1150px]:col-span-4 max-[1050px]:col-span-8 dark:bg-surface-dark"
+            >
+              <!-- Table Header -->
+              <div class="mb-7 flex items-center justify-between">
+                <h2
+                  class="text-lg font-semibold text-content-primary duration-500 dark:text-white"
+                >
+                  Recent Bookings
+                </h2>
+                <button
+                  type="button"
+                  class="cursor-pointer text-sm text-info hover:text-brand-700"
+                >
+                  View All
+                </button>
+              </div>
+              <!-- Bookings Table -->
+              <div
+                class="custom-scrollbar overflow-hidden max-[550px]:overflow-x-scroll max-[550px]:py-3"
+              >
+                <table class="w-full text-sm text-nowrap">
+                  <thead>
+                    <tr
+                      class="border-b border-border-light text-left duration-500 dark:border-border-dark"
+                    >
+                      <th class="pb-4 font-medium max-[550px]:p-2">
+                        Booking ID
+                      </th>
+                      <th class="pb-4 font-medium max-[550px]:p-2">
+                        Passenger
+                      </th>
+                      <th class="pb-4 font-medium max-[550px]:p-2">Flight</th>
+                      <th class="pb-4 font-medium max-[550px]:p-2">Date</th>
+                      <th class="pb-4 font-medium max-[550px]:p-2">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      class="border-b border-border-light duration-500 dark:border-border-dark"
+                    >
+                      <td class="py-4 max-[550px]:p-2">BK12543</td>
+                      <td class="py-4 max-[550px]:p-2">John Smith</td>
+                      <td class="py-4 max-[550px]:p-2">NYC → LON</td>
+                      <td class="py-4 max-[550px]:p-2">May 28, 2025</td>
+                      <td>
+                        <span
+                          class="rounded-lg bg-success-soft px-3 py-1 text-xs font-medium text-success duration-500 dark:bg-success-dark dark:text-white"
+                        >
+                          Confirmed
+                        </span>
+                      </td>
+                    </tr>
+                    <tr
+                      class="border-b border-border-light duration-500 dark:border-border-dark"
+                    >
+                      <td class="py-4 max-[550px]:p-2">BK12542</td>
+                      <td class="py-4 max-[550px]:p-2">Emma Johnson</td>
+                      <td class="py-4 max-[550px]:p-2">PAR → DXB</td>
+                      <td class="py-4 max-[550px]:p-2">May 28, 2025</td>
+                      <td>
+                        <span
+                          class="rounded-lg bg-success-soft px-3 py-1 text-xs font-medium text-success duration-500 dark:bg-success-dark dark:text-white"
+                        >
+                          Confirmed
+                        </span>
+                      </td>
+                    </tr>
+                    <tr
+                      class="border-b border-border-light duration-500 dark:border-border-dark"
+                    >
+                      <td class="py-4 max-[550px]:p-2">BK12541</td>
+                      <td class="py-4 max-[550px]:p-2">Michael Brown</td>
+                      <td class="py-4 max-[550px]:p-2">SYD → SIN</td>
+                      <td class="py-4 max-[550px]:p-2">May 27, 2025</td>
+                      <td>
+                        <span
+                          class="rounded-lg bg-warning-soft px-3 py-1 text-xs font-medium text-warning duration-500 dark:bg-warning-dark dark:text-white"
+                        >
+                          Pending
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-4 max-[550px]:p-2">BK12540</td>
+                      <td class="py-4 max-[550px]:p-2">Sophia Davis</td>
+                      <td class="py-4 max-[550px]:p-2">TYO → NYC</td>
+                      <td class="py-4 max-[550px]:p-2">May 27, 2025</td>
+                      <td>
+                        <span
+                          class="rounded-lg bg-success-soft px-3 py-1 text-xs font-medium text-success duration-500 dark:bg-success-dark dark:text-white"
+                        >
+                          Confirmed
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section
