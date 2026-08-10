@@ -64,6 +64,28 @@ links.forEach((link) => {
   });
 });
 
+// Counter Animation
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach((counter) => {
+  const target = +counter.dataset.target;
+  const duration = 1200;
+  const start = performance.now();
+
+  function update(time) {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+
+    counter.textContent = Math.floor(target * ease).toLocaleString();
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  }
+
+  requestAnimationFrame(update);
+});
+
 // Theme Toggle
 const btn = document.getElementById("themeToggle");
 const icon = document.getElementById("themeIcon");
