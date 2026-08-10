@@ -1,13 +1,16 @@
+/* Custom Font */
 @font-face {
   font-family: "DMSans-Medium";
   src: url("assets/fonts/static/DMSans-Medium.ttf");
 }
-body{
-font-family:"DMSans-Medium";
+body {
+  font-family: "DMSans-Medium";
 }
+/* Active Navigation Link */
 .sidebar a.active-link {
   background: #ffffff22;
 }
+/* Page Transitions */
 .current {
   transform: translateX(0);
   z-index: 3;
@@ -20,6 +23,7 @@ font-family:"DMSans-Medium";
   transform: translateX(-100%);
   z-index: 1;
 }
+/* Custom Scrollbar */
 html {
   scrollbar-width: thin;
   scrollbar-color: #cbd5e1 #f8fafc;
