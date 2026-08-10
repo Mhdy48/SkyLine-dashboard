@@ -8,6 +8,7 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-white: #fff;
     --spacing: 0.25rem;
     --radius-xl: 0.75rem;
@@ -18,6 +19,9 @@
     --color-surface: #ffffff;
     --color-surface-soft: #f1f5f9;
     --color-sidebar: #09215c;
+    --color-sidebar-dark: #0f172b;
+    --color-content-primary: #0f172a;
+    --color-border-dark-soft: #1e293b;
     --color-sidebar-hover: rgb(255 255 255 / 0.15);
   }
 }
@@ -182,6 +186,9 @@
   .flex {
     display: flex;
   }
+  .table {
+    display: table;
+  }
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
@@ -203,8 +210,14 @@
   .basis-\[90\%\] {
     flex-basis: 90%;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -236,6 +249,10 @@
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .bg-surface-soft {
     background-color: var(--color-surface-soft);
   }
@@ -257,11 +274,21 @@
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
+  .text-content-primary {
+    color: var(--color-content-primary);
+  }
   .text-white {
     color: var(--color-white);
   }
   .no-underline {
     text-decoration-line: none;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .transition-all {
     transition-property: all;
@@ -390,6 +417,35 @@
       padding: calc(var(--spacing) * 0.75);
     }
   }
+  @media (prefers-color-scheme: dark) {
+    .dark\:bg-border-dark-soft {
+      background-color: var(--color-border-dark-soft);
+    }
+    .dark\:bg-sidebar-dark {
+      background-color: var(--color-sidebar-dark);
+    }
+    .dark\:bg-none {
+      background-image: none;
+    }
+    .dark\:text-yellow-400 {
+      color: var(--color-yellow-400);
+    }
+    @media (hover: hover) {
+      .dark\:hover\:bg-border-dark-soft:hover {
+        background-color: var(--color-border-dark-soft);
+      }
+    }
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
@@ -398,6 +454,8 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-outline-style: solid;
       --tw-duration: initial;
     }
   }
