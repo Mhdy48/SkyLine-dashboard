@@ -247,9 +247,6 @@
   .top-2 {
     top: calc(var(--spacing) * 2);
   }
-  .right-1 {
-    right: var(--spacing);
-  }
   .right-1\.5 {
     right: calc(var(--spacing) * 1.5);
   }
@@ -294,9 +291,6 @@
   }
   .hidden {
     display: none;
-  }
-  .table {
-    display: table;
   }
   .aspect-square {
     aspect-ratio: 1 / 1;
@@ -367,17 +361,11 @@
   .basis-\[90\%\] {
     flex-basis: 90%;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -468,9 +456,6 @@
   .bg-page-user {
     background-color: var(--color-page-user);
   }
-  .bg-sidebar-dark {
-    background-color: var(--color-sidebar-dark);
-  }
   .bg-stat-booking-soft {
     background-color: var(--color-stat-booking-soft);
   }
@@ -480,14 +465,8 @@
   .bg-stat-passenger-soft {
     background-color: var(--color-stat-passenger-soft);
   }
-  .bg-stat-revenue {
-    background-color: var(--color-stat-revenue);
-  }
   .bg-stat-revenue-soft {
     background-color: var(--color-stat-revenue-soft);
-  }
-  .bg-success {
-    background-color: var(--color-success);
   }
   .bg-success-soft {
     background-color: var(--color-success-soft);
@@ -628,9 +607,6 @@
   .text-nowrap {
     text-wrap: nowrap;
   }
-  .text-wrap {
-    text-wrap: wrap;
-  }
   .text-black {
     color: var(--color-black);
   }
@@ -673,16 +649,9 @@
   .no-underline {
     text-decoration-line: none;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .shadow-card {
     --tw-shadow: 0 1px 2px var(--tw-shadow-color, rgb(15 23 42 / 0.04));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
@@ -727,10 +696,8 @@
     --tw-outline-style: none;
     outline-style: none;
   }
-  @media (hover: hover) {
-    .group-hover\:w-full:is(:where(.group):hover *) {
-      width: 100%;
-    }
+  .group-hover\:w-full:is(:where(.group):hover *) {
+    width: 100%;
   }
   .placeholder\:text-content-muted::placeholder {
     color: var(--color-content-muted);
@@ -742,57 +709,55 @@
     --tw-shadow: 0 5px 20px var(--tw-shadow-color, rgb(37 99 235 / 0.15));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  @media (hover: hover) {
-    .hover\:scale-110:hover {
-      --tw-scale-x: 110%;
-      --tw-scale-y: 110%;
-      --tw-scale-z: 110%;
-      scale: var(--tw-scale-x) var(--tw-scale-y);
-    }
-    .hover\:scale-\[1\.02\]:hover {
-      scale: 1.02;
-    }
-    .hover\:border-border:hover {
-      border-color: var(--color-border);
-    }
-    .hover\:border-brand-100:hover {
-      border-color: var(--color-brand-100);
-    }
-    .hover\:border-brand-200:hover {
-      border-color: var(--color-brand-200);
-    }
-    .hover\:bg-sidebar-hover:hover {
-      background-color: var(--color-sidebar-hover);
-    }
-    .hover\:bg-surface:hover {
-      background-color: var(--color-surface);
-    }
-    .hover\:bg-surface-soft:hover {
-      background-color: var(--color-surface-soft);
-    }
-    .hover\:text-brand-700:hover {
-      color: var(--color-brand-700);
-    }
-    .hover\:shadow-booking:hover {
-      --tw-shadow: 0 10px 30px var(--tw-shadow-color, rgb(124 58 237 / 0.16));
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-    .hover\:shadow-brand:hover {
-      --tw-shadow: 0 10px 30px var(--tw-shadow-color, rgb(37 99 235 / 0.16));
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-    .hover\:shadow-revenue:hover {
-      --tw-shadow: 0 10px 30px var(--tw-shadow-color, rgb(249 115 22 / 0.16));
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-    .hover\:shadow-search:hover {
-      --tw-shadow: 0 5px 20px var(--tw-shadow-color, rgb(37 99 235 / 0.15));
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-    .hover\:shadow-success:hover {
-      --tw-shadow: 0 10px 30px var(--tw-shadow-color, rgb(22 163 74 / 0.16));
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
+  .hover\:scale-110:hover {
+    --tw-scale-x: 110%;
+    --tw-scale-y: 110%;
+    --tw-scale-z: 110%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .hover\:scale-\[1\.02\]:hover {
+    scale: 1.02;
+  }
+  .hover\:border-border:hover {
+    border-color: var(--color-border);
+  }
+  .hover\:border-brand-100:hover {
+    border-color: var(--color-brand-100);
+  }
+  .hover\:border-brand-200:hover {
+    border-color: var(--color-brand-200);
+  }
+  .hover\:bg-sidebar-hover:hover {
+    background-color: var(--color-sidebar-hover);
+  }
+  .hover\:bg-surface:hover {
+    background-color: var(--color-surface);
+  }
+  .hover\:bg-surface-soft:hover {
+    background-color: var(--color-surface-soft);
+  }
+  .hover\:text-brand-700:hover {
+    color: var(--color-brand-700);
+  }
+  .hover\:shadow-booking:hover {
+    --tw-shadow: 0 10px 30px var(--tw-shadow-color, rgb(124 58 237 / 0.16));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .hover\:shadow-brand:hover {
+    --tw-shadow: 0 10px 30px var(--tw-shadow-color, rgb(37 99 235 / 0.16));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .hover\:shadow-revenue:hover {
+    --tw-shadow: 0 10px 30px var(--tw-shadow-color, rgb(249 115 22 / 0.16));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .hover\:shadow-search:hover {
+    --tw-shadow: 0 5px 20px var(--tw-shadow-color, rgb(37 99 235 / 0.15));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .hover\:shadow-success:hover {
+    --tw-shadow: 0 10px 30px var(--tw-shadow-color, rgb(22 163 74 / 0.16));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   @media (width < 1300px) {
     .max-\[1300px\]\:mt-0 {
@@ -1107,19 +1072,17 @@
     --tw-shadow: 0 5px 20px var(--tw-shadow-color, rgb(37 99 235 / 0.15));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  @media (hover: hover) {
-    .dark\:hover\:border-border-dark:where(.dark, .dark *):hover {
-      border-color: var(--color-border-dark);
-    }
-    .dark\:hover\:bg-\[\#0f172b\]:where(.dark, .dark *):hover {
-      background-color: #0f172b;
-    }
-    .dark\:hover\:bg-border-dark-soft:where(.dark, .dark *):hover {
-      background-color: var(--color-border-dark-soft);
-    }
-    .dark\:hover\:bg-surface-raised-dark:where(.dark, .dark *):hover {
-      background-color: var(--color-surface-raised-dark);
-    }
+  .dark\:hover\:border-border-dark:where(.dark, .dark *):hover {
+    border-color: var(--color-border-dark);
+  }
+  .dark\:hover\:bg-\[\#0f172b\]:where(.dark, .dark *):hover {
+    background-color: #0f172b;
+  }
+  .dark\:hover\:bg-border-dark-soft:where(.dark, .dark *):hover {
+    background-color: var(--color-border-dark-soft);
+  }
+  .dark\:hover\:bg-surface-raised-dark:where(.dark, .dark *):hover {
+    background-color: var(--color-surface-raised-dark);
   }
 }
 @property --tw-rotate-x {
@@ -1220,11 +1183,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -1273,7 +1231,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-scale-x: 1;
