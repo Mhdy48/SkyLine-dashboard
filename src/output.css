@@ -8,7 +8,6 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-white: #fff;
     --spacing: 0.25rem;
     --radius-xl: 0.75rem;
@@ -16,6 +15,10 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-surface: #ffffff;
+    --color-surface-soft: #f1f5f9;
+    --color-sidebar: #09215c;
+    --color-sidebar-hover: rgb(255 255 255 / 0.15);
   }
 }
 @layer base {
@@ -179,9 +182,6 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
@@ -203,14 +203,8 @@
   .basis-\[90\%\] {
     flex-basis: 90%;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -242,9 +236,8 @@
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
+  .bg-surface-soft {
+    background-color: var(--color-surface-soft);
   }
   .bg-\[url\(\'\.\.\/assets\/images\/plain\.png\'\)\] {
     background-image: url('../assets/images/plain.png');
@@ -270,21 +263,10 @@
   .no-underline {
     text-decoration-line: none;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .transition-all {
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .duration-50 {
-    --tw-duration: 50ms;
-    transition-duration: 50ms;
   }
   .duration-300 {
     --tw-duration: 300ms;
@@ -293,6 +275,14 @@
   .duration-500 {
     --tw-duration: 500ms;
     transition-duration: 500ms;
+  }
+  @media (hover: hover) {
+    .hover\:bg-sidebar-hover:hover {
+      background-color: var(--color-sidebar-hover);
+    }
+    .hover\:bg-surface:hover {
+      background-color: var(--color-surface);
+    }
   }
   @media (width < 1300px) {
     .max-\[1300px\]\:mt-0 {
@@ -336,6 +326,9 @@
     }
     .max-\[1300px\]\:gap-15 {
       gap: calc(var(--spacing) * 15);
+    }
+    .max-\[1300px\]\:bg-sidebar {
+      background-color: var(--color-sidebar);
     }
     .max-\[1300px\]\:bg-none {
       background-image: none;
@@ -397,24 +390,6 @@
       padding: calc(var(--spacing) * 0.75);
     }
   }
-  @media (prefers-color-scheme: dark) {
-    .dark\:bg-none {
-      background-image: none;
-    }
-    .dark\:text-yellow-400 {
-      color: var(--color-yellow-400);
-    }
-  }
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
@@ -423,8 +398,6 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
-      --tw-outline-style: solid;
       --tw-duration: initial;
     }
   }

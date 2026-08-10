@@ -1,1 +1,117 @@
 @import "tailwindcss";
+@theme {
+  /* =========================================================
+     SKYLINE — BRAND
+     ========================================================= */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #1377da;
+  --color-brand-600: #0f63bd;
+  --color-brand-700: #0c4fa0;
+  --color-brand-800: #0a3f82;
+  --color-brand-900: #09215c;
+  /* =========================================================
+     SKYLINE — SURFACES
+     ========================================================= */
+  --color-page: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f1f7ff;
+  --color-surface-soft: #f1f5f9;
+
+  --color-sidebar: #09215c;
+  --color-sidebar-dark: #0f172b;
+  /* =========================================================
+     SKYLINE — DARK SURFACES
+     ========================================================= */
+  --color-page-dark: #020617;
+  --color-surface-dark: #0f172b;
+  --color-surface-raised-dark: #111827;
+  /* =========================================================
+     SKYLINE — CONTENT
+     ========================================================= */
+  --color-content-primary: #0f172a;
+  --color-content-secondary: #475569;
+  --color-content-muted: #64748b;
+  --color-content-placeholder: #94a3b8;
+
+  --color-content-dark: #ffffff;
+  --color-content-secondary-dark: #f1f1f1d1;
+  --color-content-muted-dark: #cbd5e1;
+  /* =========================================================
+     SKYLINE — BORDER
+     ========================================================= */
+  --color-border: #e2e8f0;
+  --color-border-light: #f1f5f9;
+
+  --color-border-dark: #123947;
+  --color-border-dark-soft: #1e293b;
+  /* =========================================================
+     SKYLINE — SEMANTIC
+     ========================================================= */
+  --color-success: #16a34a;
+  --color-success-soft: #dcfce7;
+  --color-success-dark: #00690d;
+
+  --color-warning: #f97316;
+  --color-warning-soft: #ffedd5;
+  --color-warning-dark: #f97316;
+
+  --color-info: #2563eb;
+  --color-info-soft: #dbeafe;
+
+  --color-danger: #e91e63;
+  --color-danger-soft: #fce7f3;
+  /* =========================================================
+     SKYLINE — STATISTICS
+     ========================================================= */
+  --color-stat-flight: #2563eb;
+  --color-stat-flight-soft: #eff6ff;
+  --color-stat-flight-soft-dark: #eff6ff;
+
+  --color-stat-passenger: #16a34a;
+  --color-stat-passenger-soft: #f0fdf4;
+  --color-stat-passenger-soft-dark: #f0fdf4;
+
+  --color-stat-booking: #9333ea;
+  --color-stat-booking-soft: #faf5ff;
+  --color-stat-booking-soft-dark: #faf5ff;
+
+  --color-stat-revenue: #f97316;
+  --color-stat-revenue-soft: #fff7ed;
+  --color-stat-revenue-soft-dark: #fff7ed;
+  /* =========================================================
+     SKYLINE — SPECIAL UI
+     ========================================================= */
+  --color-avatar: #b8c5ca3d;
+  --color-overlay: #1377da05;
+
+  --color-sidebar-hover: rgb(255 255 255 / 0.15);
+  /* =========================================================
+     SKYLINE — OTHER PAGES
+     ========================================================= */
+  --color-page-plane: #e91e63;
+  --color-page-ticket: #2e7d32;
+  --color-page-user: #1565c0;
+  /* =========================================================
+     SKYLINE — SHADOWS
+     ========================================================= */
+  --shadow-card: 0 1px 2px rgb(15 23 42 / 0.04);
+
+  --shadow-brand: 0 10px 30px rgb(37 99 235 / 0.16);
+
+  --shadow-success: 0 10px 30px rgb(22 163 74 / 0.16);
+
+  --shadow-booking: 0 10px 30px rgb(124 58 237 / 0.16);
+
+  --shadow-revenue: 0 10px 30px rgb(249 115 22 / 0.16);
+
+  --shadow-search: 0 5px 20px rgb(37 99 235 / 0.15);
+  /* =========================================================
+     SKYLINE — TYPOGRAPHY
+     ========================================================= */
+  --font-dashboard: Arial, sans-serif;
+  --font-dm: "DMSans-Medium", Arial, sans-serif;
+}
