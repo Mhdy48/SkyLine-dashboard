@@ -20,3 +20,10 @@ font-family:"DMSans-Medium";
   transform: translateX(-100%);
   z-index: 1;
 }
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f8fafc;
+}
+html.dark {
+  scrollbar-color: #334155 #020617;
+}
