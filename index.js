@@ -99,3 +99,139 @@ btn.addEventListener("click", () => {
     icon.classList.replace("fa-sun", "fa-moon");
   }
 });
+
+// Revenue Chart
+Chart.defaults.font.family = "DMSans-Medium";
+Chart.defaults.font.size = 13;
+Chart.defaults.color = "#64748B";
+
+const canvas = document.getElementById("revenueChart");
+const ctx = canvas.getContext("2d");
+
+const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+
+gradient.addColorStop(0, "rgba(37,99,235,.35)");
+gradient.addColorStop(0.5, "rgba(37,99,235,.10)");
+gradient.addColorStop(1, "rgba(37,99,235,0)");
+
+const shadowLine = {
+  id: "shadowLine",
+
+  beforeDatasetDraw(chart) {
+    const { ctx } = chart;
+
+    ctx.save();
+    ctx.shadowColor = "rgba(37,99,235,.25)";
+    ctx.shadowBlur = 20;
+    ctx.shadowOffsetY = 8;
+  },
+
+  afterDatasetDraw(chart) {
+    chart.ctx.restore();
+  },
+};
+
+new Chart(ctx, {
+  type: "line",
+
+  data: {
+    labels: ["May 1", "May 6", "May 11", "May 16", "May 21", "May 26"],
+
+    datasets: [
+      {
+        data: [11000, 19000, 12500, 22000, 18500, 30000],
+
+        borderColor: "#2563EB",
+        borderWidth: 4,
+        backgroundColor: gradient,
+        fill: true,
+
+        tension: 0.45,
+
+        pointRadius: 5,
+        pointHoverRadius: 8,
+        pointBorderWidth: 3,
+        pointBackgroundColor: "#2563EB",
+        pointBorderColor: "#fff",
+
+        hitRadius: 20,
+      },
+    ],
+  },
+
+  options: {
+    maintainAspectRatio: false,
+    responsive: true,
+
+    interaction: {
+      intersect: false,
+      mode: "index",
+    },
+
+    animation: {
+      duration: 1800,
+      easing: "easeOutQuart",
+    },
+
+    plugins: {
+      legend: {
+        display: false,
+      },
+
+      tooltip: {
+        backgroundColor: "#0F172A",
+        titleColor: "#fff",
+        bodyColor: "#fff",
+        displayColors: false,
+
+        padding: 14,
+        cornerRadius: 12,
+        caretSize: 8,
+
+        callbacks: {
+          label(context) {
+            return "$" + context.parsed.y.toLocaleString();
+          },
+        },
+      },
+    },
+
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+
+        border: {
+          display: false,
+        },
+
+        ticks: {
+          color: "#64748B",
+        },
+      },
+
+      y: {
+        beginAtZero: true,
+
+        border: {
+          display: false,
+        },
+
+        ticks: {
+          stepSize: 10000,
+
+          callback(value) {
+            return "$" + value / 1000 + "K";
+          },
+        },
+
+        grid: {
+          color: "rgba(148,163,184,.15)",
+          drawTicks: false,
+        },
+      },
+    },
+  },
+  plugins: [shadowLine],
+});
